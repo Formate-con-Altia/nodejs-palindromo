@@ -28,9 +28,9 @@ Dicho formulario debe hacer una petición GET al endpoint, y pasarle como parám
 
 Recuerda todos los puntos que debes tener en cuenta a la hora de configurar un formulario HTML:
 
-1. Tipo de petición (GET? POST?)
+1. Tipo de petición GET
 2. Atributo HTML que permite establecer el endpoint al que el formulario hace la petición
-3. Los atributos necesarios en el tag \<input> para pasar los valores del control en la petición al servidor. 
+3. Los atributos **name** necesarios en el tag <input> para pasar los valores del control en la petición al servidor. 
 
 No necesitas realizar ningun tipo de código JavaScript en tu formulario para hacerlo funcionar.
 
@@ -41,6 +41,18 @@ En resumen debe pasar lo siguiente:
 3. El usuario introduce la palabra en el formulario y la da al botón de 'Enviar' (o botón de __submit__)
 4. El formulario hace una petición GET al endpoint '/comprobar'; pasándole correctamente los parámetros por la QueryString
 5. El servidor devuelve un valor, true o false, igual que en el requisito 1.
+
+## Requisito BONUS
+
+En breve vamos a observar como una de las funcinalidades principales de los lenguajes de programación de lado servidor es el acceso a base de datos (aunque ya no es exclusivo de ellos con la evolución de JavaScrip).
+
+Define una variable global en su script NodeJS de nombre **numComprobaciones** que nos va a indicar el número de veces que se ha utilizado este servicio para comprobar si una palabra es un palíndromo.
+Además, devuelve esta información al usuario cada vez que compruebe si una palabra es un palíndromo. Algo así como:
+
+```
+Dinoseto NO es un palíndromo.
+Este servicio se ha usado 5 veces
+```
 
 ## Solución
 
